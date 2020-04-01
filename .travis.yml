@@ -4,7 +4,7 @@ services:
   - docker 
 
 before_install:
-  - docker build -it fdsasfsdfds/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t fdsasfsdfds/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true fdsasfsdfds/react-test npm test -- --coverage
